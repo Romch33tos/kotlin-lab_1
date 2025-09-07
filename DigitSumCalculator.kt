@@ -1,14 +1,16 @@
-class DigitSumCalculator() {
+class DigitSumCalculator {
   fun calculate() {
     println("Введите целое положительное число:")
-    val numberInput = readln()
-    if (numberInput.isNullOrBlank()) {
-      println("Ошибка: введено пустое значение.")
+    val userInput = readln()
+
+    if (userInput.isNullOrBlank()) {
+      println("Ошибка: введено пустое значение!")
       return
     }
-    val number = numberInput.toIntOrNull()
+
+    val number = userInput.toIntOrNull()
     if (number == null || number <= 0) {
-      println("Ошибка: введите положительное целое число.")
+      println("Ошибка: введите положительное целое число!")
       return
     }
 
